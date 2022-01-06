@@ -122,24 +122,33 @@
       align-items: flex-end;
     }
 
-    .slid-page button {
-      padding: 8px 30px;
+    .slid-page a {
+      padding: 9px 10px;
       display: flex;
       outline: none;
+      justify-content: center;
+      align-items: center;
       border: none;
       position: absolute;
-      background: white;
+      background: #ffffff;
       z-index: 20;
       margin-bottom: 30px;
-      bottom: 0px;
+      bottom: 7px;
       left: 50%;
-      width: 160px;
-      margin-left: -80px;
+      width: 122px;
+      margin-left: -61px;
+      text-decoration: none;
     }
 
-    .slid-page button span {
-      font-size: 0.8rem;
-      font-family: "Spartan", sans-serif;
+    @font-face {
+      font-family: "Futura medium";
+      src: url("./futura\ medium\ bt.ttf");
+    }
+    .slid-page a span {
+      font-size: 12px;
+      font-family: "Futura medium";
+      text-decoration: none;
+      color: black;
     }
 
     .carousel-control-next,
@@ -149,17 +158,27 @@
       position: absolute;
       bottom: 0;
       top: unset;
+      opacity: 1 !important;
     }
+
     .carousel-control-next-icon {
       background-image: url(./right.png);
       position: absolute;
-      bottom: 33px;
+      bottom: 42px;
+      width: 20px !important;
+      height: 24px !important;
+      opacity: 1 !important;
+      right: 30px;
     }
 
     .carousel-control-prev-icon {
+      left: 30px;
       background-image: url(./left.png);
       position: absolute;
-      bottom: 33px;
+      bottom: 42px;
+      width: 20px !important;
+      height: 24px !important;
+      opacity: 1 !important;
     }
 
     .watch1 {
@@ -317,7 +336,7 @@
                       <div class="mask">
                         <div class="watch1"></div>
                       </div>
-                      <button><span>KNOW MORE</span></button>
+                      <a href="#"><span>KNOW MORE</span></a>
                     </div>
                   </div>
                   <div class="carousel-item h-100">
@@ -326,7 +345,7 @@
                       <div class="mask">
                         <div class="watch2"></div>
                       </div>
-                      <button><span>KNOW MORE</span></button>
+                      <a href="#"><span>KNOW MORE</span></a>
                     </div>
                   </div>
                   <div class="carousel-item h-100">
@@ -335,7 +354,7 @@
                       <div class="mask">
                         <div class="watch3"></div>
                       </div>
-                      <button><span>KNOW MORE</span></button>
+                      <a href="#"><span>KNOW MORE</span></a>
                     </div>
                   </div>
                 </div>
