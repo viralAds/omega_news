@@ -115,19 +115,22 @@
 
     .slid-page button {
       padding: 8px 30px;
-      display: inline-block;
+      display: flex;
       outline: none;
       border: none;
       position: absolute;
       background: white;
       z-index: 20;
       margin-bottom: 30px;
-      font-size: 12px;
-      font-family: "Spartan", sans-serif;
       bottom: 0px;
       left: 50%;
       width: 160px;
       margin-left: -80px;
+    }
+
+    .slid-page button span {
+      font-size: 0.8rem;
+      font-family: "Spartan", sans-serif;
     }
 
     .carousel-control-next,
@@ -213,7 +216,7 @@
   </style>
 
   <body>
-    <div class="container container-fluid" style="max-width: 100%;">
+    <div class="container container-fluid" style="max-width: 100%">
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Hindustan_Times_logo.svg/2560px-Hindustan_Times_logo.svg.png"
         alt="logo"
@@ -312,7 +315,7 @@
                         <div class="mask">
                           <div class="watch1"></div>
                         </div>
-                        <button>KNOW MORE</button>
+                        <button><span>KNOW MORE</span></button>
                       </div>
                     </div>
                     <div class="carousel-item h-100">
@@ -321,7 +324,7 @@
                         <div class="mask">
                           <div class="watch2"></div>
                         </div>
-                        <button>KNOW MORE</button>
+                        <button><span>KNOW MORE</span></button>
                       </div>
                     </div>
                     <div class="carousel-item h-100">
@@ -330,7 +333,7 @@
                         <div class="mask">
                           <div class="watch3"></div>
                         </div>
-                        <button>KNOW MORE</button>
+                        <button><span>KNOW MORE</span></button>
                       </div>
                     </div>
                   </div>
