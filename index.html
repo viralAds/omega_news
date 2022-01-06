@@ -26,6 +26,7 @@
     .omega {
       background-color: rgb(236, 236, 236);
       min-height: 500px;
+      height: 500px;
       display: flex;
     }
     .omega::before {
@@ -40,6 +41,7 @@
     .omega-wrap {
       width: 320px;
       height: 480px;
+      min-height: 480px;
       margin: auto;
       background-color: #dce1e4;
       overflow: hidden;
@@ -48,6 +50,7 @@
     .new-sliding-page {
       width: 320px !important;
       height: 480px !important;
+      min-height: 480px;
       margin: auto;
       overflow: hidden;
       visibility: hidden;
@@ -433,9 +436,13 @@
     <script>
       window.addEventListener("scroll", (event) => {
         let scroll = this.scrollY;
-        if (scroll > 1222) {
+        if (scroll > 2000) {
           document.getElementById("coimg").style.bottom = "0";
           document.getElementById("engage").style.left = `22%`;
+        }
+        else {
+          document.getElementById("coimg").style.bottom = "-239px";
+          document.getElementById("engage").style.left = `-50%`;
         }
       });
       function swipnext() {
