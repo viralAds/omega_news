@@ -151,20 +151,15 @@
       top: unset;
     }
     .carousel-control-next-icon {
-      background-image: url(./arrow.png);
+      background-image: url(./right.png);
       position: absolute;
       bottom: 33px;
-      border-radius: 50px;
-      background-color: #dce1e4;
     }
 
     .carousel-control-prev-icon {
-      background-image: url(./arrow.png);
-      transform: rotate(180deg);
+      background-image: url(./left.png);
       position: absolute;
       bottom: 33px;
-      border-radius: 50px;
-      background-color: #dce1e4;
     }
 
     .watch1 {
@@ -490,6 +485,20 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
+      const myInterval = setInterval(myTimer, 35);
+      var counter = 0;
+      var increase = (Math.PI * 2) / 100;
+      var i = 0;
+      function myTimer() {
+        i += 0.1;
+        x = i;
+        y = Math.abs(Math.sin(counter));
+        counter += increase;
+        $(".mask")[0].style.width = Math.ceil(y * 100) + "%";
+        $(".mask")[1].style.width = Math.ceil(y * 100) + "%";
+        $(".mask")[2].style.width = Math.ceil(y * 100) + "%";
+      }
+
       $(document).ready(function () {
         $(".slid-page").mousemove(function (event) {
           var relX = event.pageX - $(this).offset().left;
@@ -498,6 +507,7 @@
           $(".mask")[0].style.width = x + "%";
           $(".mask")[1].style.width = x + "%";
           $(".mask")[2].style.width = x + "%";
+          clearInterval(myInterval);
         });
 
         $(".slid-page").on("touchmove", function (event) {
@@ -506,6 +516,7 @@
           $(".mask")[0].style.width = x + "%";
           $(".mask")[1].style.width = x + "%";
           $(".mask")[2].style.width = x + "%";
+          clearInterval(myInterval);
         });
       });
     </script>
